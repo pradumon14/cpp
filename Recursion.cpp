@@ -5,20 +5,19 @@
 #include <iostream>
 using namespace std;
 
-// ------------------------------
-// Recursive function to find factorial
-// ------------------------------
-// This function calls itself again and again
-// until the value of n becomes 0.
-// factorial(n) = n * factorial(n-1)
+// -----------------------------------------------
+// Recursive function to find factorial of a number
+// -----------------------------------------------
 int factorial(int n) {
-    
+
     if (n == 0) {
+
         // Base Case: factorial of 0 is always 1
         return 1;
     }
     else {
-        // Recursive Call: n multiplied by factorial of (n-1)
+
+        // Recursive Call: n multiplied by factorial(n-1)
         return n * factorial(n - 1);
     }
 }
@@ -30,8 +29,7 @@ int main() {
     cout << "Enter a number: ";
     cin >> num;
 
-    // Displaying the result using the recursive function
-    cout << "Factorial of " << num << " is: " << factorial(num);
+    cout << "\nFactorial of " << num << " is: " << factorial(num) << endl;
 
     return 0;   // Ending the program
 }
